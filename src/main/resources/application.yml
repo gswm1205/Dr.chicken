@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/drchicken
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #        dialect: org.hibernate.dialect.PostgreSQLDialect
+        #        show_sql: true
+        format_sql: true
+
+  #  data:
+  #    web:
+  #      pageable:
+  #        default-page-size: 10
+  #        max-page-size: 2000
+  #        one-indexed-parameters: true
+
+  logging.level:
+    org.hibernate.SQL: debug
+  #  org.hibernate.type: trace
+
+# spring fox 3.0.0 / spring boot 2.6.x 호환 이슈
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

@@ -1,6 +1,7 @@
 buildscript {
 	ext {
 		queryDslVersion = "5.0.0"
+		swaggerVersion = "3.0.0"
 	}
 }
 
@@ -33,7 +34,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-quartz'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+	implementation "io.springfox:springfox-boot-starter:${swaggerVersion}"
+	//implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
+	//implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
 	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 	annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
 	compileOnly 'org.projectlombok:lombok'
